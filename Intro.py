@@ -14,9 +14,7 @@ with st.sidebar:
     )
     st.write(parrafo)
 
-url_ia = "https://sites.google.com/view/aplicacionesdeia/inicio"
-st.subheader("En el siguiente enlace puedes encontrar páginas y ejercicios prácticos")
-st.write(f"Enlace para páginas y ejercicios: [Enlace]({url_ia})")
+st.subheader("Mis proyectos")
 
 # ---------------------------------------------------------------
 # LISTA DE PROYECTOS (11 espacios)
