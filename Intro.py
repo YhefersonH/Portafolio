@@ -1,87 +1,120 @@
+import os
 import streamlit as st
-from PIL import Image
+
+st.set_page_config(page_title="Aplicaciones de IA", layout="wide")
 st.title("Aplicaciones de Inteligencia Artificial.")
 
 with st.sidebar:
-  st.subheader("Aplicaciones con Inteligencia Artificial.")
-  parrafo = (
-    "La inteligencia artificial permite mejorar la toma de decisiones con el uso de datos, "
-    "automatizar tareas rutinarias y proporcionar análisis avanzados en tiempo real, lo que "
-    "resulta en una mayor eficiencia y precisión en diversos campos."
-  )
-  st.write(parrafo)
+    st.subheader("Aplicaciones con Inteligencia Artificial.")
+    parrafo = (
+        "La inteligencia artificial permite mejorar la toma de decisiones con el uso de datos, "
+        "automatizar tareas rutinarias y proporcionar análisis avanzados en tiempo real, lo que "
+        "resulta en una mayor eficiencia y precisión en diversos campos."
+    )
+    st.write(parrafo)
 
-url_ia="https://sites.google.com/view/aplicacionesdeia/inicio"
+url_ia = "https://sites.google.com/view/aplicacionesdeia/inicio"
 st.subheader("En el siguiente enlace puedes encontrar páginas y ejercicios prácticos")
 st.write(f"Enlace para páginas y ejercicios: [Enlace]({url_ia})")
-col1, col2, col3 = st.columns(3)
 
-with col1:
- 
- st.subheader("Conversión de texto a voz")
- image = Image.open('txt_to_audio2.png')
- st.image(image, width=190)
- st.write("En la siguiente enlace usaremos una de las aplicaciones de Inteligencia Artificial") 
- url = "https://imultimod.streamlit.app/"
- st.write(f"Texto a voz: [Enlace]({url})")
+# ---------------------------------------------------------------
+# LISTA DE PROYECTOS (11 espacios)
+# - imagen: archivo que debe estar en la MISMA carpeta que Intro.py
+# - url:    pega aquí el enlace de cada streamlit
+# ---------------------------------------------------------------
+PROYECTOS = [
+    {
+        "titulo": "🎯 Descenso de Gradiente",
+        "imagen": "descenso_gradiente.png",
+        "descripcion": "Explora cómo la tasa de aprendizaje y el punto inicial afectan la convergencia del descenso de gradiente, con la trayectoria en 3D y la curva de error.",
+        "url": "",
+    },
+    {
+        "titulo": "📈 Regresión: conceptos clave",
+        "imagen": "regresion_conceptos.png",
+        "descripcion": "Recorre el modelo, la función de costo, el gradiente y las métricas de evaluación con datos reales de vivienda en California.",
+        "url": "",
+    },
+    {
+        "titulo": "🌡️ Series de Tiempo con sensor IoT",
+        "imagen": "series_tiempo_iot.png",
+        "descripcion": "Simula un sensor de temperatura y analiza tendencia, estacionalidad, ruido, ACF/PACF, ventanas deslizantes y modelos clásicos.",
+        "url": "",
+    },
+    {
+        "titulo": "☁️ Predictor de calidad del aire",
+        "imagen": "calidad_aire_cornare.png",
+        "descripcion": "Carga modelos entrenados (.pkl) y genera predicciones de PM2.5 y PM10 hacia adelante para CORNARE.",
+        "url": "",
+    },
+    {
+        "titulo": "🌡️ Predictor de Sensación Térmica",
+        "imagen": "sensacion_termica.png",
+        "descripcion": "Usa datos de temperatura y humedad de un sensor IoT (DHT22 con ESP32 vía InfluxDB) para entrenar una regresión lineal.",
+        "url": "",
+    },
+    {
+        "titulo": "🍎 ¿Qué fruta es más parecida?",
+        "imagen": "fruta_parecida.png",
+        "descripcion": "Ingresa peso, diámetro y dulzor de una fruta y mira su distancia a manzana, banano, naranja y pera.",
+        "url": "",
+    },
+    {
+        "titulo": "🚨 Detector de Anomalías",
+        "imagen": "detector_anomalias.png",
+        "descripcion": "Compara una alarma por regla lógica, la notación Big-O y un benchmark entre evaluación ingenua y vectorizada con NumPy.",
+        "url": "",
+    },
+    {
+        "titulo": "🌧️ ¿Lloverá mañana?",
+        "imagen": "lluvia_logistica.png",
+        "descripcion": "Regresión logística interactiva: elige variables y umbral, simula un nuevo día y observa la probabilidad de lluvia en la curva sigmoide.",
+        "url": "",
+    },
+    {
+        "titulo": "🌱 KNN con suelos de AGROSAVIA",
+        "imagen": "knn_suelos.png",
+        "descripcion": "Clasifica la fertilidad del suelo (baja, media, alta) con KNN y explora escalado, elección de k, métricas y fuga de datos.",
+        "url": "",
+    },
+    {
+        "titulo": "🗂️ Datos: preparación y estructura",
+        "imagen": "datos_preparacion.png",
+        "descripcion": "Experimenta con un dataset sintético de sensores IoT: tipos de datos, valores faltantes, outliers, normalización y división train/val/test.",
+        "url": "",
+    },
+    {
+        "titulo": "🌊 Monitoreo del Nivel del Río",
+        "imagen": "nivel_rio.png",
+        "descripcion": "Consulta por rango de fechas el nivel del río en la Estación 18, Quebrada Doradal (Puerto Triunfo).",
+        "url": "",
+    },
+]
 
- st.subheader("Reconocimiento de Objetos")
- image = Image.open('txt_to_audio.png')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como se detectan objetos en Imágenes.") 
- url = "https://yolov5cmc.streamlit.app/"
- st.write(f"YOLO: [Enlace]({url})")
-
- st.subheader("Entrenando Modelos")
- image = Image.open('OIG5.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como puedes usar tu modelo entrenado.") 
- url = "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/"
- st.write(f"YOLO: [Enlace]({url})")
-
-with col2: 
- st.subheader("Conversión de voz a texto")
- image = Image.open('OIG8.jpg')
- st.image(image, width=200)
- st.write("En la siguiente veremos una aplicación que usa la conversión de voz a texto.") 
- url = "https://traductorw.streamlit.app/"
- st.write(f"Voz a texto: [Enlace]({url})")
-
- st.subheader("Análisis de Datos")
- image = Image.open('data_analisis.png')
- st.image(image, width=190)
- st.write("En la siguiente enlace veremos como se pueden analizar datos usando agentes.") 
- url = "https://dataagente.streamlit.app/"
- st.write(f"Datos: [Enlace]({url})")
-
- st.subheader("Trasnscriptor Audio y Video")
- image = Image.open('OIG3.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como realizamos transcripciones de audio/video.") 
- url = "https://transcript-whisper.streamlit.app/"
- st.write(f"Transcriptor: [Enlace]({url})")
+COLUMNAS = 3
 
 
-with col3: 
- st.subheader("Generación en Contexto")
- image = Image.open('Chat_pdf.png')
- st.image(image, width=190)
- st.write("En la siguiente veremos una aplicación que usa RAG a partir de un documento (PDF).") 
- url = "https://chatpdf-cc.streamlit.app/"
- st.write(f"RAG: [Enlace]({url})")
+def mostrar_proyecto(p):
+    """Dibuja una tarjeta de proyecto dentro de la columna actual."""
+    st.subheader(p["titulo"])
 
- st.subheader("Análisis de Imagen")
- image = Image.open('OIG4.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos la capacidad de análisis en Imágenes.") 
- url = "https://vision2-gpt4o.streamlit.app/"
- st.write(f"Vision: [Enlace]({url})")
- 
- st.subheader("Sistema Ciberfísico")
- image = Image.open('OIG6.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos la capacidad de interacción con el mundo físico.") 
- url = "https://vision2-gpt4o.streamlit.app/"
- st.write(f"Vision: [Enlace]({url})")
+    if p["imagen"] and os.path.exists(p["imagen"]):
+        st.image(p["imagen"], width=280)
+    else:
+        st.caption("🖼️ Imagen pendiente: " + (p["imagen"] or "sin nombre"))
+
+    st.write(p["descripcion"])
+
+    if p["url"]:
+        st.write(f"[Abrir aplicación]({p['url']})")
+    else:
+        st.write("🔜 Enlace próximamente")
 
 
+# Se recorre la lista de 3 en 3 para que cada fila quede alineada
+for i in range(0, len(PROYECTOS), COLUMNAS):
+    fila = st.columns(COLUMNAS)
+    for col, proyecto in zip(fila, PROYECTOS[i:i + COLUMNAS]):
+        with col:
+            mostrar_proyecto(proyecto)
+    st.divider()
