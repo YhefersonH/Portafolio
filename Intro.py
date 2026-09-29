@@ -27,7 +27,7 @@ PROYECTOS = [
         "titulo": "🎯 Descenso de Gradiente",
         "imagen": "descenso_gradiente.png",
         "descripcion": "Explora cómo la tasa de aprendizaje y el punto inicial afectan la convergencia del descenso de gradiente, con la trayectoria en 3D y la curva de error.",
-        "url": "",
+        "url": "https://calculo-fspfkxoshay2sv46h3umzg.streamlit.app/",
     },
     {
         "titulo": "📈 Regresión: conceptos clave",
