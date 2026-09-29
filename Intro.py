@@ -2,14 +2,14 @@ import os
 import streamlit as st
 
 st.set_page_config(page_title="Portafolio de Yheferson Henao", page_icon="💼", layout="wide")
-st.title("Aplicaciones de Inteligencia Artificial.")
+st.title("💼 Portafolio de Yheferson Henao")
+st.caption("Computación Avanzada · Proyectos de inteligencia artificial y ciencia de datos")
 
-with st.sidebar:
-    st.subheader("Aplicaciones con Inteligencia Artificial.")
-    parrafo = (
-        "La inteligencia artificial permite mejorar la toma de decisiones con el uso de datos, "
-        "automatizar tareas rutinarias y proporcionar análisis avanzados en tiempo real, lo que "
-        "resulta en una mayor eficiencia y precisión en diversos campos."
+    st.subheader("Sobre mí")
+        parrafo = (
+        "Soy Yheferson Henao. En este portafolio reúno los proyectos que he desarrollado "
+        "en Computación Avanzada: desde regresión y series de tiempo hasta sensores IoT, "
+        "KNN y monitoreo ambiental. Cada tarjeta lleva a una aplicación que puedes probar en vivo."
     )
     st.write(parrafo)
 
