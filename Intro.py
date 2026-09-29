@@ -1,7 +1,7 @@
 import os
 import streamlit as st
 
-st.set_page_config(page_title="Aplicaciones de IA", layout="wide")
+st.set_page_config(page_title="Portafolio de Yheferson Henao", page_icon="💼", layout="wide")
 st.title("Aplicaciones de Inteligencia Artificial.")
 
 with st.sidebar:
