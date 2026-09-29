@@ -33,61 +33,61 @@ PROYECTOS = [
         "titulo": "📈 Regresión: conceptos clave",
         "imagen": "regresion_conceptos.png",
         "descripcion": "Recorre el modelo, la función de costo, el gradiente y las métricas de evaluación con datos reales de vivienda en California.",
-        "url": "",
+        "url": "https://regresion-kr58i4bhfzeqbbvvxcxxph.streamlit.app/",
     },
     {
         "titulo": "🌡️ Series de Tiempo con sensor IoT",
         "imagen": "series_tiempo_iot.png",
         "descripcion": "Simula un sensor de temperatura y analiza tendencia, estacionalidad, ruido, ACF/PACF, ventanas deslizantes y modelos clásicos.",
-        "url": "",
+        "url": "https://sarima-e6nrew4hvzbjmctzecj8bz.streamlit.app/",
     },
     {
         "titulo": "☁️ Predictor de calidad del aire",
         "imagen": "calidad_aire_cornare.png",
         "descripcion": "Carga modelos entrenados (.pkl) y genera predicciones de PM2.5 y PM10 hacia adelante para CORNARE.",
-        "url": "",
+        "url": "https://pronostico-wyxhba4sdwbtxo8q98b7hm.streamlit.app/",
     },
     {
         "titulo": "🌡️ Predictor de Sensación Térmica",
         "imagen": "sensacion_termica.png",
         "descripcion": "Usa datos de temperatura y humedad de un sensor IoT (DHT22 con ESP32 vía InfluxDB) para entrenar una regresión lineal.",
-        "url": "",
+        "url": "https://predicciom-hu3utrcfeqvupgutg6eyfa.streamlit.app/",
     },
     {
         "titulo": "🍎 ¿Qué fruta es más parecida?",
         "imagen": "fruta_parecida.png",
         "descripcion": "Ingresa peso, diámetro y dulzor de una fruta y mira su distancia a manzana, banano, naranja y pera.",
-        "url": "",
+        "url": "https://mipstr-94gah3ivhutnbuhxesdbpe.streamlit.app/",
     },
     {
         "titulo": "🚨 Detector de Anomalías",
         "imagen": "detector_anomalias.png",
         "descripcion": "Compara una alarma por regla lógica, la notación Big-O y un benchmark entre evaluación ingenua y vectorizada con NumPy.",
-        "url": "",
+        "url": "https://maquina-de-salas-nvpngxw66ufqh2dgiubd9l.streamlit.app/",
     },
     {
         "titulo": "🌧️ ¿Lloverá mañana?",
         "imagen": "lluvia_logistica.png",
         "descripcion": "Regresión logística interactiva: elige variables y umbral, simula un nuevo día y observa la probabilidad de lluvia en la curva sigmoide.",
-        "url": "",
+        "url": "https://logistica-yx4y3vm3kz3klxkfcacugb.streamlit.app/",
     },
     {
         "titulo": "🌱 KNN con suelos de AGROSAVIA",
         "imagen": "knn_suelos.png",
         "descripcion": "Clasifica la fertilidad del suelo (baja, media, alta) con KNN y explora escalado, elección de k, métricas y fuga de datos.",
-        "url": "",
+        "url": "https://g7eb8ctaxt9raksavgcta2.streamlit.app/",
     },
     {
         "titulo": "🗂️ Datos: preparación y estructura",
         "imagen": "datos_preparacion.png",
         "descripcion": "Experimenta con un dataset sintético de sensores IoT: tipos de datos, valores faltantes, outliers, normalización y división train/val/test.",
-        "url": "",
+        "url": "https://dfatos-bhpepuk7cho2rbuzu96ekw.streamlit.app/",
     },
     {
         "titulo": "🌊 Monitoreo del Nivel del Río",
         "imagen": "nivel_rio.png",
         "descripcion": "Consulta por rango de fechas el nivel del río en la Estación 18, Quebrada Doradal (Puerto Triunfo).",
-        "url": "",
+        "url": "https://cause-del-rio-estacion-18-n9cfknsn4xifjumwivorz9.streamlit.app/",
     },
 ]
 
@@ -99,7 +99,7 @@ def mostrar_proyecto(p):
     st.subheader(p["titulo"])
 
     if p["imagen"] and os.path.exists(p["imagen"]):
-        st.image(p["imagen"], width=280)
+        st.image(p["imagen"], width=400)
     else:
         st.caption("🖼️ Imagen pendiente: " + (p["imagen"] or "sin nombre"))
 
