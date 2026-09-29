@@ -5,8 +5,9 @@ st.set_page_config(page_title="Portafolio de Yheferson Henao", page_icon="💼",
 st.title("💼 Portafolio de Yheferson Henao")
 st.caption("Computación Avanzada · Proyectos de inteligencia artificial y ciencia de datos")
 
+with st.sidebar:
     st.subheader("Sobre mí")
-        parrafo = (
+    parrafo = (
         "Soy Yheferson Henao. En este portafolio reúno los proyectos que he desarrollado "
         "en Computación Avanzada: desde regresión y series de tiempo hasta sensores IoT, "
         "KNN y monitoreo ambiental. Cada tarjeta lleva a una aplicación que puedes probar en vivo."
